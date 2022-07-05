@@ -7,6 +7,10 @@
 }
 
 @media all and (max-width: 1200px) {
+  .home {
+    @include grid(2);
+    grid-template-columns: 60% 40%;
+  }
   .portfolio {
     .projects {
       gap: 50px 40px;

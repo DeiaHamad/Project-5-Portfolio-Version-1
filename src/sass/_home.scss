@@ -2,7 +2,6 @@
 
 .home {
   @include grid(2);
-  grid-template-columns: 60% 40%;
   grid-auto-rows: 100vh;
   padding-left: 0;
 
@@ -26,7 +25,7 @@
       align-items: flex-end;
       background-color: var(--color-black);
       height: 90%;
-      width: 90%;
+      width: 80%;
       border-radius: 20px;
 
       img {
@@ -35,6 +34,7 @@
         object-fit: cover;
         transition: var(--transition);
         filter: grayscale(100%);
+        z-index: 1;
 
         &:hover {
           filter: grayscale(0);
