@@ -191,7 +191,7 @@ const myData = {
           {
             lang: "Sass",
             icon: <DiSass className="project-icon" />,
-            codeLines: 1199,
+            codeLines: 1205,
           },
           {
             lang: "React",

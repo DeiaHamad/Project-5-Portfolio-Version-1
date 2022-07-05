@@ -1344,6 +1344,9 @@
     font-size: 0.8rem !important;
     top: 85% !important;
   }
+  .home .left-home .img-container img {
+    height: 85%;
+  }
   .about-me .skills .lvl-container .percentage-container p {
     width: 20% !important;
   }
@@ -1370,9 +1373,6 @@
   }
   .home .right-home h3 {
     font-size: 1.3rem !important;
-  }
-  .portfolio .projects .project .top-section {
-    width: 280px;
   }
   .portfolio .projects .project .middle-section .project-details {
     display: -webkit-box;

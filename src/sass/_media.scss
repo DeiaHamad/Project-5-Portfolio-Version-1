@@ -472,6 +472,15 @@
       top: 85% !important;
     }
   }
+  .home {
+    .left-home {
+      .img-container {
+        img {
+          height: 85%;
+        }
+      }
+    }
+  }
   .about-me {
     .skills {
       .lvl-container {
@@ -509,9 +518,6 @@
   .portfolio {
     .projects {
       .project {
-        .top-section {
-          width: 280px;
-        }
         .middle-section {
           .project-details {
             @include flex(column);
