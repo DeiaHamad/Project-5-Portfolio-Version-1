@@ -55,7 +55,7 @@
 }
 
 .home .left-home .img-container img {
-  max-height: 95%;
+  max-height: 90%;
   max-width: 95%;
   -o-object-fit: cover;
      object-fit: cover;
