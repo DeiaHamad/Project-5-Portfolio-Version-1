@@ -3,7 +3,7 @@
   "name": "Deia-ElDin Portfolio",
   "icons": [
     {
-      "src": "./assets/deia/favicon(1).ico"
+      "src": "%PUBLIC_URL%/assets/deia/favicon(1).ico"
     }
   ],
   "start_url": ".",
