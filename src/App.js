@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from "react";
+import Controls from "./components/controls/Controls";
+import Home from "./components/home/Home";
+import AboutMe from "./components/aboutMe/AboutMe";
+import Portfolio from "./components/portfolio/Portfolio ";
+import ContactMe from "./components/contactMe/ContactMe";
+import "./sass/App.css";
+
+export const AppContext = createContext(null);
+export const ContactMeContext = createContext(null);
 
 function App() {
+  const [web, setWeb] = useState({
+    home: true,
+    aboutMe: false,
+    portfolio: false,
+    contactMe: false,
+  });
+
+  const [formInputs, setFormInputs] = useState({
+    nameValue: "",
+    emailValue: "",
+    subjectValue: "",
+    messageValue: "",
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{ web, setWeb }}>
+      <div className="App">
+        <Controls />
+        {web.home && <Home />}
+        {web.aboutMe && <AboutMe />}
+        {web.portfolio && <Portfolio />}
+        <ContactMeContext.Provider value={{ formInputs, setFormInputs }}>
+          {web.contactMe && <ContactMe />}
+        </ContactMeContext.Provider>
+      </div>
+    </AppContext.Provider>
   );
 }
 

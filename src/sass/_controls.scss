@@ -1,0 +1,33 @@
+@import "./general";
+
+.controls {
+  @include flex(column);
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 50%;
+  right: 3%;
+  height: 70vh;
+  transform: translateY(50%);
+  z-index: 1;
+
+  .control {
+    height: 55px;
+    width: 55px;
+
+    button {
+      @include flex(row);
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      border: none;
+      background-color: var(--color-3);
+      color: var(--color-1);
+      cursor: pointer;
+
+      .control-icon {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}

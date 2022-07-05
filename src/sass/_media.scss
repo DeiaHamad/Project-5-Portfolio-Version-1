@@ -1,0 +1,536 @@
+@import "./general";
+
+@media all and (max-width: 1250px) {
+  section {
+    width: 89vw !important;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .portfolio {
+    .projects {
+      gap: 50px 40px;
+    }
+  }
+}
+
+@media all and (max-width: 1150px) {
+  section {
+    width: 88vw !important;
+  }
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 425px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1070px) {
+  section {
+    width: 87vw !important;
+  }
+  .home {
+    display: grid;
+    grid-template-columns: 500px auto !important;
+  }
+  .about-me {
+    .skills,
+    .work-experience {
+      gap: 50px 40px;
+    }
+  }
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 380px;
+        }
+      }
+    }
+  }
+  .contact-me {
+    .contact-container {
+      gap: 50px 40px;
+    }
+  }
+}
+
+@media all and (max-width: 1030px) {
+  .about-me {
+    .skills,
+    .work-experience {
+      gap: 50px 35px;
+    }
+  }
+  .portfolio {
+    .projects {
+      gap: 50px 35px;
+      .project {
+        .top-section {
+          width: 350px;
+        }
+      }
+    }
+  }
+  .contact-me {
+    .contact-container {
+      gap: 50px 35px;
+    }
+  }
+}
+
+@media all and (max-width: 999px) {
+  .about-me {
+    .infos {
+      @include grid(2);
+      grid-template-rows: max-content;
+      .left-infos {
+        @include flex(column);
+        justify-content: space-between;
+      }
+      .right-infos {
+        @include grid(2);
+        article:last-child {
+          grid-column: 1 / 3;
+        }
+      }
+    }
+    .work-experience {
+      @include grid(1);
+      .job-block {
+        width: 100%;
+      }
+    }
+  }
+  .contact-me {
+    .right-contact {
+      form {
+        .person-details {
+          @include flex(column);
+        }
+        .btn-container {
+          .submit-btn {
+            font-size: 20px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 960px) {
+  .home {
+    gap: 0;
+    .right-home {
+      h1 {
+        font-size: 4.5rem !important;
+      }
+      h3 {
+        font-size: 1.3rem !important;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 935px) {
+  .home {
+    display: grid;
+    grid-template-columns: 480px auto !important;
+  }
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 325px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 900px) {
+  section {
+    width: 85vw !important;
+  }
+  .about-me {
+    .skills {
+      gap: 50px 30px;
+      .lvl-container {
+        .percentage-container {
+          p {
+            width: 20% !important;
+          }
+          .percentage-div {
+            width: 80% !important;
+          }
+        }
+      }
+    }
+  }
+  .portfolio {
+    .projects {
+      @include grid(1);
+      .project {
+        .top-section {
+          width: 450px;
+        }
+      }
+    }
+  }
+  .contact-me {
+    .contact-container {
+      @include grid(1);
+      .left-contact {
+        .contact-list {
+          @include grid(1);
+          gap: var(--gap);
+        }
+      }
+      .right-contact {
+        form {
+          .person-details {
+            display: flex;
+            flex-direction: row !important;
+            gap: var(--gap);
+          }
+          .btn-container {
+            .submit-btn {
+              font-size: 24px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .home {
+    display: grid;
+    grid-template-columns: 380px auto !important;
+    gap: 10px;
+    .left-home {
+      .img-container {
+        padding: 0 20px;
+      }
+    }
+    .right-home {
+      h3 {
+        margin: 30px 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    width: 80vw !important;
+  }
+  .home {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 100vh auto !important;
+    gap: 50px;
+    width: 100vw !important;
+    margin-bottom: 20px;
+
+    .left-home {
+      width: 90%;
+
+      .img-container {
+        padding: 0 70px;
+      }
+
+      footer {
+        left: 20%;
+        bottom: -5px;
+      }
+    }
+
+    .right-home {
+      padding: 0 100px;
+    }
+  }
+  .about-me {
+    .infos {
+      display: grid;
+      grid-template-columns: 2fr 1fr !important;
+      .right-infos {
+        @include grid(1);
+        article:last-child {
+          grid-column: 1 / 2 !important;
+        }
+      }
+    }
+    .skills {
+      .lvl-container {
+        .percentage-container {
+          p {
+            width: 25% !important;
+          }
+          .percentage-div {
+            width: 75% !important;
+          }
+        }
+      }
+    }
+    .work-experience {
+      padding-left: 0;
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .home {
+    .right-home {
+      p {
+        text-align: center;
+      }
+    }
+  }
+  .about-me {
+    .infos {
+      @include flex(column);
+      gap: 40px;
+      .right-infos {
+        @include flex(row);
+        gap: var(--gap);
+        .info-block {
+          min-width: 120px;
+        }
+      }
+    }
+    .skills {
+      @include grid(1);
+    }
+  }
+}
+
+@media all and (max-width: 625px) {
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  section {
+    width: 90vw !important;
+    padding: 0 !important;
+    margin: 0 auto;
+  }
+  .controls {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    height: 70px;
+    background-color: var(--color-4);
+  }
+  .home,
+  .about-me,
+  .portfolio,
+  .contact-me {
+    margin-bottom: 90px;
+  }
+  .home {
+    .left-home {
+      width: 100%;
+    }
+    .right-home {
+      padding: 0 40px;
+    }
+  }
+  .about-me {
+    .infos {
+      .right-infos {
+        .info-block {
+          min-width: 130px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .about-me {
+    .skills {
+      .lvl-container {
+        .percentage-container {
+          p {
+            width: 15% !important;
+          }
+          .percentage-div {
+            width: 85% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 380px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 460px) {
+  .contact-me {
+    .right-contact {
+      form {
+        .person-details {
+          @include flex(column);
+        }
+        .btn-container {
+          width: 40% !important;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  .about-me {
+    .infos {
+      .right-infos {
+        @include grid(2);
+        article:last-child {
+          grid-column: 1 / 3 !important;
+        }
+      }
+    }
+  }
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 420px) {
+  .section-title {
+    h2 {
+      font-size: 3rem !important;
+    }
+    h3 {
+      font-size: 1.3rem !important;
+    }
+  }
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .about-me {
+    .skills {
+      .lvl-container {
+        .percentage-container {
+          p {
+            width: 20% !important;
+          }
+          .percentage-div {
+            width: 80% !important;
+          }
+        }
+      }
+    }
+    .work-experience {
+      .job-block {
+        .info-header {
+          @include flex(column);
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 380px) {
+  .section-title {
+    h2 {
+      font-size: 2.6rem !important;
+    }
+    h3 {
+      font-size: 1rem !important;
+    }
+  }
+  .home {
+    .left-home {
+      .img-container {
+        padding: 0 50px;
+      }
+    }
+    .right-home {
+      h1 {
+        font-size: 4rem !important;
+      }
+      h3 {
+        font-size: 1.3rem !important;
+      }
+    }
+  }
+  .portfolio {
+    .projects {
+      .project {
+        .top-section {
+          width: 280px;
+        }
+        .middle-section {
+          .project-details {
+            @include flex(column);
+            gap: var(--gap);
+          }
+        }
+        .bottom-section {
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
