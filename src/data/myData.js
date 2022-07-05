@@ -191,12 +191,12 @@ const myData = {
           {
             lang: "Sass",
             icon: <DiSass className="project-icon" />,
-            codeLines: 1198,
+            codeLines: 1195,
           },
           {
             lang: "React",
             icon: <FaReact className="project-icon" />,
-            codeLines: 1246,
+            codeLines: 1257,
           },
           {
             lang: "Test",

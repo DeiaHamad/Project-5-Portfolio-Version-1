@@ -2,31 +2,36 @@
 
 .home {
   @include grid(2);
+  grid-template-columns: 60% 40%;
   grid-auto-rows: 100vh;
   padding-left: 0;
 
   .left-home {
     @include flex(row);
     height: 100%;
+    width: 100%;
+    position: relative;
 
     .shape {
       clip-path: polygon(0 0, 25% 0, 78% 100%, 0% 100%);
       background-color: var(--color-secondary);
       height: 100%;
       width: 100%;
-      position: relative;
+      position: absolute;
+      z-index: -1;
     }
 
     .img-container {
       @include flex(row);
+      align-items: flex-end;
       background-color: var(--color-black);
-      position: absolute;
       height: 90%;
+      width: 90%;
       border-radius: 20px;
-      padding: 0 70px;
 
       img {
-        height: 100%;
+        max-height: 95%;
+        max-width: 95%;
         object-fit: cover;
         transition: var(--transition);
         filter: grayscale(100%);
@@ -39,7 +44,7 @@
 
     footer {
       position: absolute;
-      left: 5%;
+      left: 10%;
       bottom: 5px;
     }
   }
@@ -47,10 +52,13 @@
   .right-home {
     @include flex(column);
     margin: auto 0;
+    text-align: center;
+    width: 100%;
 
     h1,
     h3 {
       text-align: center;
+      width: 100%;
     }
 
     h1 {

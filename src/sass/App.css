@@ -4,6 +4,8 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
   grid-auto-rows: 100vh;
   padding-left: 0;
 }
@@ -19,6 +21,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .home .left-home .shape {
@@ -27,7 +31,8 @@
   background-color: var(--color-secondary);
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
+  z-index: -1;
 }
 
 .home .left-home .img-container {
@@ -40,15 +45,18 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   background-color: var(--color-black);
-  position: absolute;
   height: 90%;
+  width: 90%;
   border-radius: 20px;
-  padding: 0 70px;
 }
 
 .home .left-home .img-container img {
-  height: 100%;
+  max-height: 95%;
+  max-width: 95%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: var(--transition);
@@ -64,7 +72,7 @@
 
 .home .left-home footer {
   position: absolute;
-  left: 5%;
+  left: 10%;
   bottom: 5px;
 }
 
@@ -80,11 +88,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto 0;
+  text-align: center;
+  width: 100%;
 }
 
 .home .right-home h1,
 .home .right-home h3 {
   text-align: center;
+  width: 100%;
 }
 
 .home .right-home h1 span {
@@ -898,6 +909,27 @@
   }
 }
 
+@media all and (max-width: 1200px) and (min-height: 1000px) and (max-height: 1400px) {
+  .home {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    -ms-grid-rows: max-content auto !important;
+        grid-template-rows: -webkit-max-content auto !important;
+        grid-template-rows: max-content auto !important;
+    gap: 50px;
+    width: 100vw !important;
+    margin-bottom: 20px;
+  }
+  .home .left-home {
+    width: 85%;
+  }
+  .home .right-home {
+    padding: 0 100px;
+  }
+}
+
 @media all and (max-width: 1150px) {
   section {
     width: 88vw !important;
@@ -916,12 +948,6 @@
 @media all and (max-width: 1070px) {
   section {
     width: 87vw !important;
-  }
-  .home {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 500px auto !important;
-        grid-template-columns: 500px auto !important;
   }
   .about-me .skills,
   .about-me .work-experience {
@@ -1014,9 +1040,6 @@
 }
 
 @media all and (max-width: 960px) {
-  .home {
-    gap: 0;
-  }
   .home .right-home h1 {
     font-size: 4.5rem !important;
   }
@@ -1026,12 +1049,6 @@
 }
 
 @media all and (max-width: 935px) {
-  .home {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 480px auto !important;
-        grid-template-columns: 480px auto !important;
-  }
   .portfolio .projects .project .top-section {
     width: 325px;
   }
@@ -1040,6 +1057,12 @@
 @media all and (max-width: 900px) {
   section {
     width: 85vw !important;
+  }
+  .home {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 68% 32% !important;
+        grid-template-columns: 68% 32% !important;
   }
   .about-me .skills {
     gap: 50px 30px;
@@ -1087,19 +1110,24 @@
   }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 850px) {
   .home {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 380px auto !important;
-        grid-template-columns: 380px auto !important;
-    gap: 10px;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    -ms-grid-rows: max-content auto !important;
+        grid-template-rows: -webkit-max-content auto !important;
+        grid-template-rows: max-content auto !important;
+    gap: 50px;
+    width: 100vw !important;
+    margin-bottom: 20px;
   }
-  .home .left-home .img-container {
-    padding: 0 20px;
+  .home .left-home {
+    width: 85%;
   }
-  .home .right-home h3 {
-    margin: 30px 0;
+  .home .right-home {
+    padding: 0 100px;
   }
 }
 
@@ -1115,21 +1143,15 @@
     display: grid;
     -ms-grid-columns: 1fr !important;
         grid-template-columns: 1fr !important;
-    -ms-grid-rows: 100vh auto !important;
-        grid-template-rows: 100vh auto !important;
+    -ms-grid-rows: max-content auto !important;
+        grid-template-rows: -webkit-max-content auto !important;
+        grid-template-rows: max-content auto !important;
     gap: 50px;
     width: 100vw !important;
     margin-bottom: 20px;
   }
   .home .left-home {
-    width: 90%;
-  }
-  .home .left-home .img-container {
-    padding: 0 70px;
-  }
-  .home .left-home footer {
-    left: 20%;
-    bottom: -5px;
+    width: 85%;
   }
   .home .right-home {
     padding: 0 100px;
@@ -1163,9 +1185,6 @@
 }
 
 @media all and (max-width: 650px) {
-  .home .right-home p {
-    text-align: center;
-  }
   .about-me .infos {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1311,6 +1330,13 @@
 }
 
 @media all and (max-width: 400px) {
+  .section-title h2 {
+    font-size: 2.2rem !important;
+  }
+  .section-title h3 {
+    font-size: 0.8rem !important;
+    top: 85% !important;
+  }
   .about-me .skills .lvl-container .percentage-container p {
     width: 20% !important;
   }
@@ -1332,15 +1358,6 @@
 }
 
 @media all and (max-width: 380px) {
-  .section-title h2 {
-    font-size: 2.6rem !important;
-  }
-  .section-title h3 {
-    font-size: 1rem !important;
-  }
-  .home .left-home .img-container {
-    padding: 0 50px;
-  }
   .home .right-home h1 {
     font-size: 4rem !important;
   }
