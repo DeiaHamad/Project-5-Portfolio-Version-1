@@ -1,0 +1,11 @@
+{
+  "short_name": "Portfolio",
+  "name": "Deia-ElDin Portfolio",
+  "icons": [
+    {
+      "src": "./assets/deia/favicon(1).ico"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
