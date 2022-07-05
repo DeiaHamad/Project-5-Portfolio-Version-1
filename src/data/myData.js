@@ -178,6 +178,36 @@ const myData = {
         finishingDate: "June 19, 2022",
         duration: handleProjects("May 5, 2022", "June 19, 2022"),
       },
+      {
+        id: "p5",
+        title: "Portfolio",
+        github: "https://github.com/DeiaHamad/Project-5-Portfolio",
+        technology: [
+          {
+            lang: "Html",
+            icon: <IoLogoHtml5 className="project-icon" />,
+            codeLines: 16,
+          },
+          {
+            lang: "Sass",
+            icon: <DiSass className="project-icon" />,
+            codeLines: 1198,
+          },
+          {
+            lang: "React",
+            icon: <FaReact className="project-icon" />,
+            codeLines: 1246,
+          },
+          {
+            lang: "Test",
+            icon: <SiTestinglibrary className="project-icon" />,
+            codeLines: 1076,
+          },
+        ],
+        startingDate: "June 28, 2022",
+        finishingDate: "July 5, 2022",
+        duration: handleProjects("June 28, 2022", "July 5, 2022"),
+      },
     ],
   },
   jobs: [
