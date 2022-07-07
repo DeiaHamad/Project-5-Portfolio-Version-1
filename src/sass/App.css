@@ -61,7 +61,6 @@
   transition: var(--transition);
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  z-index: 1;
 }
 
 .home .left-home .img-container img:hover {
@@ -1345,7 +1344,7 @@
     top: 85% !important;
   }
   .home .left-home .img-container img {
-    height: 85%;
+    height: 87%;
   }
   .about-me .skills .lvl-container .percentage-container p {
     width: 20% !important;
