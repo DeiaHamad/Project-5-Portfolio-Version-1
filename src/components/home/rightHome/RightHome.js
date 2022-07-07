@@ -8,7 +8,7 @@ function RightHome() {
       </h1>
       <h3>A Web Designer.</h3>
       <p>
-        Hi, I'm a web developer based in Abu Dhabi, UAE. I have a passion for
+        Hi, I'm a web desinger based in Abu Dhabi, UAE. I have a passion for
         web design and love to create for web and mobile devices.
       </p>
     </article>
