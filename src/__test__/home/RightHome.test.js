@@ -18,7 +18,7 @@ function createElements({ rightHomeArticle, myName, myJob, myIntro }) {
   }
   if (myJob) {
     const myJobElement = screen.getByRole("heading", {
-      name: /a front\-end web designer\./i,
+      name: /a web designer\./i,
     });
     elementsArray.push(myJobElement);
   }
