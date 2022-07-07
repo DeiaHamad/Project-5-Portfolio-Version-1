@@ -18,13 +18,13 @@ function createElements({ rightHomeArticle, myName, myJob, myIntro }) {
   }
   if (myJob) {
     const myJobElement = screen.getByRole("heading", {
-      name: /a web designer\./i,
+      name: /a front\-end web developer\./i,
     });
     elementsArray.push(myJobElement);
   }
   if (myIntro) {
     const myIntroElement = screen.getByText(
-      /hi, i'm a web designer based in abu dhabi, uae\. i have a passion for web design and love to create for web and mobile devices\./i
+      /hi, i'm a web developer based in abu dhabi, uae\. i have a passion for web design and love to create for web and mobile devices\./i
     );
     elementsArray.push(myIntroElement);
   }
