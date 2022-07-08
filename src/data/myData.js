@@ -322,7 +322,13 @@ function handleExperience() {
   let unit;
   let num;
 
-  const startingDate = new Date("2021-11-1 00:00:00").getTime();
+  function convertDateForIos(date) {
+    var arr = date.split(/[- :]/);
+    date = new Date(arr[0], arr[1] - 1, arr[2], arr[3], arr[4], arr[5]);
+    return date;
+  }
+
+  const startingDate = convertDateForIos("2021-11-1 00:00:00").getTime();
   const currentDate = new Date().getTime();
 
   const expInMonths = Math.floor(
@@ -343,6 +349,7 @@ function handleExperience() {
   }
   num = startingDate;
   unit = currentDate;
+
   return [num, unit];
 }
 
