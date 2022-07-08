@@ -4,6 +4,7 @@ import myData from "../../../data/myData";
 
 function Infos() {
   const { exp, clients, projects } = myData;
+  const expText = `${exp.num} ${exp.text}`;
 
   return (
     <div className="infos" data-testid="infos">
@@ -20,11 +21,7 @@ function Infos() {
         </p>
       </div>
       <div className="right-infos">
-        <InfoBlock
-          icon={exp.icon}
-          header="Experience"
-          text={exp.num + " " + exp.unit}
-        />
+        <InfoBlock icon={exp.icon} header="Experience" text={expText} />
         <InfoBlock icon={clients.icon} header="Clients" num={clients.num} />
         <InfoBlock
           icon={projects.icon}
