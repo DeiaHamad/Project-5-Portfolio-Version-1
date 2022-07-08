@@ -4,7 +4,8 @@ import myData from "../../../data/myData";
 
 function Infos() {
   const { exp, clients, projects } = myData;
-  const totalProjects = projects.array.length;
+  const expText = `${exp.num} ${exp.unit}`;
+  const projectsNum = projects.array.length;
 
   return (
     <div className="infos" data-testid="infos">
@@ -21,9 +22,9 @@ function Infos() {
         </p>
       </div>
       <div className="right-infos">
-        <InfoBlock icon={exp.icon} header="Experience" text={exp.num} />
+        <InfoBlock icon={exp.icon} header="Experience" text={expText} />
         <InfoBlock icon={clients.icon} header="Clients" num={clients.num} />
-        <InfoBlock icon={projects.icon} header="Projects" num={totalProjects} />
+        <InfoBlock icon={projects.icon} header="Projects" num={projectsNum} />
       </div>
     </div>
   );

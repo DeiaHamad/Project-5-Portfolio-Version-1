@@ -321,7 +321,8 @@ const myData = {
 function handleExperience() {
   let unit;
   let num;
-  const startingDate = new Date("2021, November");
+  const IOSStartingDate = new Date("2021, November".split(/[- :]/));
+  const startingDate = new Date(IOSDate);
   const currentDate = new Date();
   const startingDateYear = startingDate.getFullYear();
   const startingDateMonth = startingDate.getMonth();
