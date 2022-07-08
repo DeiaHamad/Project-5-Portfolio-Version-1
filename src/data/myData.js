@@ -324,11 +324,6 @@ function handleExperience() {
 
   const startingDate = new Date("2021-11-1 00:00:00").getTime();
   const currentDate = new Date().getTime();
-  // const sDYear = startingDate.getFullYear();
-  // const sMonth = startingDate.getMonth();
-  // const cDYear = currentDate.getFullYear();
-  // const cDMonth = currentDate.getMonth();
-  // const expInMonths = cDMonth + 12 * cDYear - (sMonth + 12 * sDYear);
 
   const expInMonths = Math.floor(
     (currentDate - startingDate) / 1000 / 30 / 60 / 60 / 24
@@ -346,7 +341,8 @@ function handleExperience() {
     num = expInMonths;
     unit = "Months";
   }
-
+  num = startingDate;
+  unit = currentDate;
   return [num, unit];
 }
 
