@@ -1,7 +1,6 @@
 import React from "react";
 import InfoBlock from "./dependencies/InfoBlock";
 import myData from "../../../data/myData";
-import { string } from "prop-types";
 
 function Infos() {
   const { exp, clients, projects } = myData;
@@ -23,7 +22,7 @@ function Infos() {
         </p>
       </div>
       <div className="right-infos">
-        <InfoBlock icon={exp.icon} header="Experience" text={expText} />
+        <InfoBlock icon={exp.icon} header="Experience" text={exp.num} />
         <InfoBlock icon={clients.icon} header="Clients" num={clients.num} />
         <InfoBlock icon={projects.icon} header="Projects" num={totalProjects} />
       </div>
