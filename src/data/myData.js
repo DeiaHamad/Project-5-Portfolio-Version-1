@@ -245,7 +245,7 @@ const myData = {
       startDate: "2017",
       endDate: "2018",
       description:
-        "Managing the work and ensure delivery at time with a good quality.",
+        "Managing the work and ensuring delivery on time with good quality.",
       country: "UAE",
     },
     {
