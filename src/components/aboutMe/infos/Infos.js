@@ -4,7 +4,6 @@ import myData from "../../../data/myData";
 
 function Infos() {
   const { exp, clients, projects } = myData;
-  const expText = `${exp.num} ${exp.unit}`;
   const totalProjects = projects.array.length;
 
   return (
