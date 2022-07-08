@@ -50,11 +50,11 @@
   height: 90%;
   width: 80%;
   border-radius: 20px;
-  padding: 20px 20px 0 20px;
 }
 
 .home .left-home .img-container img {
-  max-height: 87%;
+  max-height: 85%;
+  max-width: 90%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: var(--transition);

@@ -27,10 +27,10 @@
       height: 90%;
       width: 80%;
       border-radius: 20px;
-      padding: 20px 20px 0 20px;
 
       img {
-        max-height: 87%;
+        max-height: 85%;
+        max-width: 90%;
         object-fit: cover;
         transition: var(--transition);
         filter: grayscale(100%);
