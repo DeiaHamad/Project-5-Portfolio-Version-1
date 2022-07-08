@@ -23,7 +23,7 @@ function Infos() {
         <InfoBlock
           icon={exp.icon}
           header="Experience"
-          text={`${exp.num} ${exp.unit}`}
+          text={exp.num + " " + exp.unit}
         />
         <InfoBlock icon={clients.icon} header="Clients" num={clients.num} />
         <InfoBlock

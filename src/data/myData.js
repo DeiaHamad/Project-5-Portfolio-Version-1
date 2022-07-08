@@ -344,6 +344,7 @@ function handleExperience() {
     num = expInMonths;
     unit = "Months";
   }
+
   return [num, unit];
 }
 
