@@ -322,13 +322,7 @@ function handleExperience() {
   let unit;
   let num;
 
-  function convertDateForIos(date) {
-    const iosDate = new Date(date.split(/[- :]/));
-    console.log(iosDate);
-    return iosDate;
-  }
-
-  const startingDate = convertDateForIos("2021, November");
+  const startingDate = new Date("2021-11-1");
   const currentDate = new Date();
   const startingDateYear = startingDate.getFullYear();
   const startingDateMonth = startingDate.getMonth();
@@ -341,14 +335,14 @@ function handleExperience() {
 
   if (expInMonths > 12) {
     const expInYears = expInMonths / 12;
-    num = Number(Math.ceil(expInYears));
+    num = Math.ceil(expInYears);
     if (expInYears < 2) {
       unit = "Year";
     } else {
       unit = "Years";
     }
   } else {
-    num = Number(expInMonths);
+    num = expInMonths;
     unit = "Months";
   }
 
