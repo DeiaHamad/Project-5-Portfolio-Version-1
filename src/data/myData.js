@@ -322,16 +322,13 @@ function handleExperience() {
   let unit;
   let num;
 
-  const startingDate = new Date("2021-11-1");
+  const startingDate = new Date("2021-11-1 00:00:00");
   const currentDate = new Date();
-  const startingDateYear = startingDate.getFullYear();
-  const startingDateMonth = startingDate.getMonth();
-  const currentDateYear = currentDate.getFullYear();
-  const currentDateMonth = currentDate.getMonth();
-  const expInMonths =
-    currentDateMonth +
-    12 * currentDateYear -
-    (startingDateMonth + 12 * startingDateYear);
+  const sDYear = startingDate.getFullYear();
+  const sMonth = startingDate.getMonth();
+  const cDYear = currentDate.getFullYear();
+  const cDMonth = currentDate.getMonth();
+  const expInMonths = cDMonth + 12 * cDYear - (sMonth + 12 * sDYear);
 
   if (expInMonths > 12) {
     const expInYears = expInMonths / 12;
