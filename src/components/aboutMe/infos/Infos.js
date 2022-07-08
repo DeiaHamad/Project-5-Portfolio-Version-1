@@ -1,10 +1,11 @@
 import React from "react";
 import InfoBlock from "./dependencies/InfoBlock";
 import myData from "../../../data/myData";
+import { string } from "prop-types";
 
 function Infos() {
   const { exp, clients, projects } = myData;
-  const expText = `${exp.num} ${exp.text}`;
+  const expText = `${exp.num.toString()} ${exp.unit}`;
 
   return (
     <div className="infos" data-testid="infos">
