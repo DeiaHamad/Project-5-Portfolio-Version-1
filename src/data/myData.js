@@ -334,14 +334,14 @@ function handleExperience() {
 
   if (expInMonths > 12) {
     const expInYears = expInMonths / 12;
-    num = Math.ceil(expInYears);
+    num = Math.ceil(expInYears).toString();
     if (expInYears < 2) {
       unit = "Year";
     } else {
       unit = "Years";
     }
   } else {
-    num = expInMonths;
+    num = expInMonths.toString();
     unit = "Months";
   }
 

@@ -5,7 +5,8 @@ import { string } from "prop-types";
 
 function Infos() {
   const { exp, clients, projects } = myData;
-  const expText = `${exp.num.toString()} ${exp.unit}`;
+  const expText = `${exp.num} ${exp.unit}`;
+  const totalProjects = projects.array.length;
 
   return (
     <div className="infos" data-testid="infos">
@@ -24,11 +25,7 @@ function Infos() {
       <div className="right-infos">
         <InfoBlock icon={exp.icon} header="Experience" text={expText} />
         <InfoBlock icon={clients.icon} header="Clients" num={clients.num} />
-        <InfoBlock
-          icon={projects.icon}
-          header="Projects"
-          num={projects.array.length}
-        />
+        <InfoBlock icon={projects.icon} header="Projects" num={totalProjects} />
       </div>
     </div>
   );
